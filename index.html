@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catalogue B2B · Fondation HYSTERESIS · PCI 2</title>
+  <meta name="description" content="Catalogue officiel des 45 profils des lauréats PCI 2 pour la session B2B de la Fondation HYSTERESIS." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="hero" id="top">
+    <nav class="topbar" aria-label="Navigation principale">
+      <a class="brand" href="#top" aria-label="Retour en haut de page">
+        <img src="assets/logo-hysteresis.svg" alt="Fondation HYSTERESIS" />
+      </a>
+      <div class="top-actions">
+        <button class="ghost-btn" id="toggleView" type="button">Vue compacte</button>
+        <button class="primary-btn" id="printBtn" type="button">Imprimer / PDF</button>
+      </div>
+    </nav>
+
+    <section class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Programme Conversations Inspirantes 2</p>
+        <h1>Catalogue officiel des 45 profils lauréats pour la session B2B</h1>
+        <p class="lead">Un espace vivant pour identifier les talents, encourager les mises en relation et créer des passerelles par région, domaine et opportunité.</p>
+        <div class="hero-buttons">
+          <a class="primary-btn" href="#catalogue">Explorer les profils</a>
+          <a class="soft-btn" href="#methodologie">Voir la méthodologie</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="Indicateurs clés du catalogue">
+        <div class="stat-card highlight">
+          <span class="stat-number" id="totalProfiles">45</span>
+          <span class="stat-label">profils lauréats</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="totalDomains">9</span>
+          <span class="stat-label">familles de métiers</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="totalRegions">6</span>
+          <span class="stat-label">zones couvertes</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">B2B</span>
+          <span class="stat-label">mentorat · stages · missions · contrats</span>
+        </div>
+      </aside>
+    </section>
+  </header>
+
+  <main>
+    <section class="section intro" id="methodologie">
+      <div class="section-heading">
+        <p class="eyebrow">Note d’usage</p>
+        <h2>Un catalogue professionnel, inspirant et responsable</h2>
+      </div>
+      <div class="intro-grid">
+        <article class="info-card">
+          <h3>Objectif</h3>
+          <p>Présenter les lauréats validés, leurs domaines d’intervention, leurs compétences valorisables et leur potentiel de collaboration pour la session B2B.</p>
+        </article>
+        <article class="info-card">
+          <h3>Utilisation</h3>
+          <p>Faciliter les mises en relation avec les partenaires, mentors, recruteurs, structures B2B et acteurs susceptibles d’ouvrir des opportunités.</p>
+        </article>
+        <article class="info-card">
+          <h3>Confidentialité</h3>
+          <p>Les coordonnées et photos doivent être diffusées uniquement après validation interne et accord des bénéficiaires concernés.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section controls-section" aria-label="Filtres du catalogue">
+      <div class="controls-card">
+        <div class="search-wrap">
+          <label for="searchInput">Recherche rapide</label>
+          <input id="searchInput" type="search" placeholder="Nom, commune, compétence, domaine..." autocomplete="off" />
+        </div>
+        <div class="select-wrap">
+          <label for="domainFilter">Domaine</label>
+          <select id="domainFilter"><option value="">Tous les domaines</option></select>
+        </div>
+        <div class="select-wrap">
+          <label for="regionFilter">Région</label>
+          <select id="regionFilter"><option value="">Toutes les régions</option></select>
+        </div>
+        <div class="select-wrap">
+          <label for="statusFilter">Statut</label>
+          <select id="statusFilter"><option value="">Tous les statuts</option></select>
+        </div>
+        <button class="soft-btn clear-btn" id="clearFilters" type="button">Réinitialiser</button>
+      </div>
+      <div class="results-line"><span id="resultsCount">45</span> profil(s) affiché(s)</div>
+    </section>
+
+    <section class="section" id="catalogue">
+      <div class="section-heading inline">
+        <div>
+          <p class="eyebrow">Talents & opportunités</p>
+          <h2>Profils des lauréats</h2>
+        </div>
+        <a href="#top" class="top-link">Retour en haut ↑</a>
+      </div>
+      <div class="cards-grid" id="cardsGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <strong>Aucun profil trouvé.</strong>
+        <span>Essaie un autre mot-clé ou réinitialise les filtres.</span>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="profile-modal" id="profileModal" aria-labelledby="modalName">
+    <button class="modal-close" id="closeModal" type="button" aria-label="Fermer">×</button>
+    <div class="modal-body" id="modalBody"></div>
+  </dialog>
+
+  <footer class="footer">
+    <div>
+      <strong>Fondation HYSTERESIS</strong>
+      <p>Catalogue B2B · Programme Conversations Inspirantes 2</p>
+    </div>
+    <p class="footer-note">Version de travail à valider avant diffusion externe.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

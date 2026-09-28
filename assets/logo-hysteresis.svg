@@ -1,0 +1,8 @@
+<svg width="720" height="180" viewBox="0 0 720 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="720" height="180" rx="32" fill="#241F1B"/>
+<circle cx="92" cy="90" r="52" fill="#F18432" opacity="0.95"/>
+<path d="M69 102C78 76 99 64 122 64C110 77 101 91 97 117C86 116 77 111 69 102Z" fill="#FFF5E9"/>
+<path d="M96 117C100 91 110 77 122 64C127 84 119 105 96 117Z" fill="#F6C762"/>
+<text x="170" y="82" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#FFF5E9">Fondation HYSTERESIS</text>
+<text x="170" y="124" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#F6C762">Conversations Inspirantes · Catalogue B2B</text>
+</svg>
